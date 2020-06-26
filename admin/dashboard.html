@@ -22,12 +22,12 @@
 
 <body>
     <div style="width:100%;position: fixed;z-index:200;" class="shadow-lg p-2 w3-blue-gray">
-        <div style="width:65px;" id="showmenu" onclick="w3_open()" class="hide show-small container show-sidebar w3-animate-opacity">
+        <div data-placement="right" data-toggle="tooltip" title="Open Menu" style="width:65px;" id="showmenu" onclick="w3_open()" class="show-small container show-sidebar w3-animate-opacity">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <div id="closemenu" style="margin-left:-7px;width:65px;" onclick="w3_close()" class="hide-small change container close-sidebar w3-animate-opacity">
+        <div data-placement="right" data-toggle="tooltip" title="Close Menu" id="closemenu" style="margin-left:-7px;width:65px;" onclick="w3_close()" class="hide hide-small change container close-sidebar w3-animate-opacity">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
@@ -193,20 +193,20 @@
         <div class="mt-1" style="border-top:1px solid white">
         </div>
     </div>
-    <div class="page-wrapper chiller-theme toggled">
+    <div class="page-wrapper chiller-theme">
         <!-- Side Start Navigation -->
         <!-- ********************************************************************************************** -->
         <nav id="sidebar" class="sidebar-wrapper hide-small w3-animate-left">
             <div class="sidebar-content">
                 <div class="sidebar-brand">
                     <a href="#">PN GOMS</a>
-                    <div class="close-sidebar" onclick="w3_close()">
+                    <div data-placement="left" data-toggle="tooltip" title="Close Menu" class="close-sidebar" onclick="w3_close()">
                         <i class="closeicon fas fa-close"></i>
                     </div>
                 </div>
                 <div class="sidebar-header text-center">
                     <div style="margin-left:33%" class="user-pic">
-                        <img class="rounded-circle" src="src/img/user.jpg" alt="User picture">
+                        <img class="rounded-circle" src="../src/img/user.jpg" alt="User picture">
                         <div class="user-info">
                             <span class="user-status">
                                 <i class="fa fa-circle"></i>
@@ -216,7 +216,7 @@
                     </div>
                     <span class="text-white"> <strong>John Paul Vistal</strong></span>
                     <span class="text-white">Administrator</span>
-                    <button class = "btn btn-sm btn-primary btn-block">View Profile</button>
+                    <button class="btn btn-sm btn-primary btn-block">View Profile</button>
                 </div>
                 <!-- sidebar-header  -->
 
@@ -239,7 +239,7 @@
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="registration/student_reg.php">Student</a>
+                                        <a href="registration/student_reg.html">Student</a>
                                     </li>
                                     <li>
                                         <a href="#">Admin</a>
@@ -404,10 +404,10 @@
     <!-- page-wrapper -->
 
 
-<div id="preloader">
-  <div id="loader"></div>
-  <h6 class = "loadingtxt w3-animate-fading">Loading...</h6>
-</div>
+    <div id="preloader">
+        <div id="loader"></div>
+        <h6 class="loadingtxt w3-animate-fading">Loading...</h6>
+    </div>
 
 
     <script>
@@ -424,12 +424,12 @@
             $("[data-toggle=tooltip]").tooltip();
         });
 
-        
+
         var preloader = document.getElementById('preloader');
         window.addEventListener('load', function() {
-        function preload() {
-            preloader.style.display = 'none';
-        }
+            function preload() {
+                preloader.style.display = 'none';
+            }
             setTimeout(preload, 1500);
         });
     </script>
